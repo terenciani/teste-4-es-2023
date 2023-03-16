@@ -30,10 +30,16 @@ public class Introducao {
 	}
 	
 	@Test
-	public void caminhoABG() {
-		int[] valores = { 2, 4 };
-		OrdenaVetor.recebeDados(2, valores);
+	public void ordenacaoCorreta() {
+		String[] valores = { "2", "4" };
+		OrdenaVetor.recebeDados("2", valores);
 		assertEquals("2,42,4", outContent.toString().replaceAll("\\s+", ""));
+	}
+	@Test
+	public void nInvalido() {
+		String[] valores = { "2", "4" };
+		OrdenaVetor.recebeDados("800000", valores);
+		assertEquals("Tamanhoinválidodovetor", outContent.toString().replaceAll("\\s+", ""));
 	}
 
 }
