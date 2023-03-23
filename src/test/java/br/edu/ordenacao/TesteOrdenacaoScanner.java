@@ -9,9 +9,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.edu.ifpr.ordenacao.OrdenaVetor;
+import br.edu.ifpr.ordenacao.OrdenaVetorScanner;
 
-public class Introducao {
+
+public class TesteOrdenacaoScanner {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 	private final PrintStream originalOut = System.out;
@@ -32,13 +33,13 @@ public class Introducao {
 	@Test
 	public void ordenacaoCorreta() {
 		String[] valores = { "2", "4" };
-		OrdenaVetor.recebeDados("2", valores);
+		OrdenaVetorScanner.recebeDados("2", valores);
 		assertEquals("2,42,4", outContent.toString().replaceAll("\\s+", ""));
 	}
 	@Test
 	public void nInvalido() {
 		String[] valores = { "2", "4" };
-		OrdenaVetor.recebeDados("800000", valores);
+		OrdenaVetorScanner.recebeDados("800000", valores);
 		assertEquals("Tamanhoinválidodovetor", outContent.toString().replaceAll("\\s+", ""));
 	}
 
