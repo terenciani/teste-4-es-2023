@@ -11,5 +11,12 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>ifpr.edu.br</groupId>
+			<artifactId>paranavai.calendario</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/paranavai.calendario-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
 	</dependencies>
 </project>
