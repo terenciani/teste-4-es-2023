@@ -12,7 +12,7 @@ public class TesteNumerosPrimos {
 
     @Test
     public void numerosMenoresOuIguaisAUm(){
-        for(int i = -5000; i <= 10; i++){
+        for(int i = -5000; i <= 1; i++){
             assertFalse(NumerosPrimos.ehPrimo(i));
         }
     }
